@@ -1,0 +1,10 @@
+task: dms
+task_kwargs: {n_stim: 4, delay: [20, 40], resp_weight: 5.0}
+n_hidden: 64
+batch_size: 64
+# Match/non-match is XOR-like and both cells can stall at the symmetric "output 0" saddle.
+# Learning rates found by a small sweep on seed 0:
+# the GRU needs a large lr to escape, the tanh RNN a small one and more steps.
+cell_overrides:
+  gru: {lr: 1.0e-2, n_steps: 6000}
+  tanh: {lr: 5.0e-4, n_steps: 12000}

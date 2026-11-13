@@ -1,0 +1,6 @@
+task: sine
+task_kwargs: {T: 150, omega_min: 0.1, omega_max: 0.6}
+n_hidden: 64
+n_steps: 4000
+batch_size: 64
+lr: 1.0e-3

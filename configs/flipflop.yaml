@@ -1,0 +1,6 @@
+task: flipflop
+task_kwargs: {n_bits: 3, T: 100, p_pulse: 0.04}
+n_hidden: 64
+n_steps: 3000
+batch_size: 64
+lr: 1.0e-3
